@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find first_pkg)/config/params.yaml" />
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node"></node>
+    <node pkg="first_pkg" type="navigation.py" name="navigation_server_node" output="screen"></node>
+    <node pkg="first_pkg" type="controller.py" name="controller_node" output="screen"></node>
+
+</launch>
